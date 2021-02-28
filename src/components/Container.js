@@ -1,14 +1,54 @@
 import React from 'react'
-import { Grid ,Typography } from '@material-ui/core'
+import {Button, Card, Grid ,Typography,CardMedia , CardActions , CardContent } from '@material-ui/core'
 import Navbar from './Navbar'
 import './styles.css'
 import { makeStyles } from '@material-ui/core/styles'
-
+import Vectorcircle from './vectorcircle'
+import Circle from './circle'
+import image1 from '../images/image1.png'
+import image2 from '../images/image2.png'
+// import image1 from '../images/image1.png'
 const useStyles = makeStyles(() => ({
   container: {
     height: 2079,
     backgroundSize : 'cover',
     backgroundColor : '#0A0B1A' ,
+  },
+  media: {
+    height: 0,
+    paddingTop: '65%',
+  },
+  border: {
+    border: 'solid',
+  },
+  fullHeightCard: {
+    height: '100%',
+  },
+  card: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    background: '#410056',
+    // boxShadow: '0px 4px 16px rgba(0, 0, 0, 0.25)',
+    borderRadius: '8px',
+    height: '100%',
+    position: 'relative',
+  },
+  grid: {
+    display: 'flex',
+  },
+  details: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    margin: '20px',
+  },
+  title: {
+    padding: '0 16px',
+  },
+  cardActions: {
+    padding: '0 16px 8px 16px',
+    display: 'flex',
+    justifyContent: 'space-between',
   },
 }))
 const Container = () => {
@@ -30,39 +70,166 @@ const Container = () => {
 </Typography>
       </div>
       <div className="div-circle">
-        <div className="div-circle-2">
-         <div className="circle">
-           <div className="content">
-             </div>
-         </div>
-        </div>
-        <div className="div-circle-2">
-        <div className="circle">
-           Great!!!!
-         </div>
-        </div>
-        <div className="div-circle-2">
-        <div className="circle">
-           Great!!!!
-         </div>
-        </div>
-        <div className="div-circle-2">
-        <div className="circle">
-           Great!!!!
-         </div>
-        </div>
+        <Vectorcircle/>
+        <Circle />
+        <Circle />
+        <Circle />
         
       </div>
       </Grid >
-      <Grid item container className="grid2" justify="center">
+      <Grid item container className="grid2" justify="center" >
         <div className="new-div">
-        <Grid container justify="center" spacing={3} style={{background: '#FFFFFF' }}>
-         
+        <Grid container >
+         <div className="upcoming">
+           <Typography style={{ fontFamily: 'Libre Baskerville', fontSize: '32px' ,fontStyle: 'normal', fontWeight: 400 , lineHeight: '40px', letterSpacing: '0em', textAlign: 'left', color: '#FFFFFF',
+}}>Upcoming Shows</Typography>
+          <div className="view">
+          <Typography style={{ fontFamily: 'Nunito', fontSize: '16px' ,fontStyle: 'normal', fontWeight: 700 , lineHeight: '24px', letterSpacing: '0em', textAlign: 'right', color: '#E5C558', 
+}}>View All</Typography>
+          </div>
+         </div>
+
         </Grid>
-        {/* <Grid item xs={false} sm={2} />
-        <Grid item xs={12} sm={8}>
+        <div className="element">
+
+        </div>
+        <Grid container justify="center" alignItems="stretch" spacing={3} direction="row" style={{marginTop: '20px'}}>
+        <Grid item lg={3} xs={6}>
+        <Card className={classes.card}>
+      <CardMedia className={classes.media} image={ 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title="roh" />
+      
+      <div className={classes.details}>
+        <Typography variant="body2" color="textSecondary" component="h2">abc</Typography>
+      </div>
+      <Typography className={classes.title} gutterBottom variant="h5" component="h2">raju</Typography>
+      <CardContent>
+        <Typography variant="body2" color="textSecondary" component="p">=Im great</Typography>
+      </CardContent>
+      <CardActions className={classes.cardActions}>
+      <Button size="small" color="primary"  >
+        </Button>
+      </CardActions>
+    </Card>
+          </Grid>
+          <Grid item lg={3} xs={6}>
+          <Card className={classes.card}>
+      <CardMedia className={classes.media} image={ 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title="roh" />
+      
+      <div className={classes.details}>
+        <Typography variant="body2" color="textSecondary" component="h2">abc</Typography>
+      </div>
+      <Typography className={classes.title} gutterBottom variant="h5" component="h2">raju</Typography>
+      <CardContent>
+        <Typography variant="body2" color="textSecondary" component="p">=Im great</Typography>
+      </CardContent>
+      <CardActions className={classes.cardActions}>
+      <Button size="small" color="primary"  >
+        </Button>
+      </CardActions>
+    </Card>
+          </Grid>
+          <Grid item lg={3} xs={6}>
+           <Card className={classes.card}>
+      <CardMedia className={classes.media} image={image2} title="roh" />
+      <div className={classes.details}>
+        <Typography variant="body2" color="textSecondary" component="h2">abc</Typography>
+      </div>
+      <Typography className={classes.title} gutterBottom variant="h5" component="h2">raju</Typography>
+      <CardContent>
+        <Typography variant="body2" color="textSecondary" component="p">=Im great</Typography>
+      </CardContent>
+      <CardActions className={classes.cardActions}>
+      <Button size="small" color="primary"  >
+        </Button>
+      </CardActions>
+    </Card>
+          </Grid>
+          <Grid item lg={3}>
+          <Card className={classes.card}>
+      <CardMedia className={classes.media} image={image1} title="roh" >
+      </CardMedia>
+      
+      
+      <div className={classes.details}>
+        <Typography variant="body2" color="textSecondary" component="h2">abc</Typography>
+      </div>
+      <Typography className={classes.title} gutterBottom variant="h5" component="h2">raju</Typography>
+      <CardContent>
+        <Typography variant="body2" color="textSecondary" component="p">Im great</Typography>
+      </CardContent>
+      <CardActions className={classes.cardActions}>
+
+      </CardActions>
+    </Card>
+          </Grid>
         </Grid>
-        <Grid item xs={false} sm={2} /> */}
+        <Grid container style={{marginTop: '114px'}} >
+         <div className="upcoming">
+           <Typography style={{ fontFamily: 'Libre Baskerville', fontSize: '32px' ,fontStyle: 'normal', fontWeight: 400 , lineHeight: '40px', letterSpacing: '0em', textAlign: 'left', color: '#FFFFFF',
+}}>Reviews</Typography>
+          <div className="view">
+          <Typography style={{ fontFamily: 'Nunito', fontSize: '16px' ,fontStyle: 'normal', fontWeight: 700 , lineHeight: '24px', letterSpacing: '0em', textAlign: 'right', color: '#E5C558',
+}}>View All</Typography>
+          </div>
+         </div>
+
+        </Grid>
+        <div className="element">
+
+        </div>
+        <Grid container justify="center" spacing={4} >
+        <Grid item lg={3} xs={6}>
+          <Card className={classes.card}>
+      <CardMedia className={classes.media} image={ 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title="roh" />
+      
+      <div className={classes.details}>
+        <Typography variant="body2" color="textSecondary" component="h2">abc</Typography>
+      </div>
+      <Typography className={classes.title} gutterBottom variant="h5" component="h2">raju</Typography>
+      <CardContent>
+        <Typography variant="body2" color="textSecondary" component="p">=Im great</Typography>
+      </CardContent>
+      <CardActions className={classes.cardActions}>
+      <Button size="small" color="primary"  >
+        </Button>
+      </CardActions>
+    </Card>
+          </Grid>
+          <Grid item lg={3} xs={6}>
+          <Card className={classes.card}>
+      <CardMedia className={classes.media} image={ 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title="roh" />
+      
+      <div className={classes.details}>
+        <Typography variant="body2" color="textSecondary" component="h2">abc</Typography>
+      </div>
+      <Typography className={classes.title} gutterBottom variant="h5" component="h2">raju</Typography>
+      <CardContent>
+        <Typography variant="body2" color="textSecondary" component="p">=Im great</Typography>
+      </CardContent>
+      <CardActions className={classes.cardActions}>
+      <Button size="small" color="primary"  >
+        </Button>
+      </CardActions>
+    </Card>
+          </Grid>
+          <Grid item lg={3} xs={6}>
+          <Card className={classes.card}>
+      <CardMedia className={classes.media} image={ 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title="roh" />
+      
+      <div className={classes.details}>
+        <Typography variant="body2" color="textSecondary" component="h2">abc</Typography>
+      </div>
+      <Typography className={classes.title} gutterBottom variant="h5" component="h2">raju</Typography>
+      <CardContent>
+        <Typography variant="body2" color="textSecondary" component="p">=Im great</Typography>
+      </CardContent>
+      <CardActions className={classes.cardActions}>
+      <Button size="small" color="primary"  >
+        </Button>
+      </CardActions>
+    </Card>
+          </Grid>
+        </Grid>
      
       </div>
     </Grid>

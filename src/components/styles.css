@@ -6,6 +6,12 @@
     background-size: cover;
     background-repeat: no-repeat;
 }  
+.grid2{
+    position:absolute;
+    top : 862px;
+    /* background-color: #FFFFFF ; */
+    height: 1219px;
+}
 /* .div-gradient {
     position:absolute;
     background: linear-gradient(180deg, rgba(5, 11, 20, 0.28) 0%, rgba(1, 13, 32, 0.69) 67.53%, #0A0B1A 85.33%);
@@ -59,34 +65,85 @@ border-radius: 0px;
 display: flex;
 }
 .div-circle-2{
+    position: relative;
     height: 267px;
     width: 267px;
-    left: 1024px;
-    top: 621px;
     border-radius: 0px;
     
 }
 .circle{
-left: 10.86%;
-right: 11.24%;
-top: 10.86%;
-bottom: 11.24%;
+position:absolute;
 height: 208px;
 width: 208px;
-opacity: 0.2;
-border: 1px solid #FFFFFF;
+border: 1px solid rgba(255, 255, 255, .2);
 border-radius: 50%;
 box-sizing: border-box;
+}
+.substract{
+position: absolute;
+height: 208px;
+width: 177.27854919433594px;
+margin-left: 32.9px;
+background-image: url("../images/Subtract.png");
 }
 .content{
 display: flex;
 flex-direction: column;
 align-items: center;
 padding: 0px;
-
-position: absolute;
+margin: 52px auto;
 width: 39px;
 height: 104px;
-left: calc(50% - 39px/2);
-top: calc(50% - 104px/2 - 0.5px);
+}
+.icon {
+height: 25.000001907348633px;
+width: 28.005409240722656px;
+margin-left: 2px;
+margin-top: 3px;
+border-radius: 0px;
+}
+.zero{
+height: 32px;
+width: 18px;
+margin-left: 8px;
+margin-top: 0px;
+border-radius: nullpx;
+
+}
+.label{
+height: 32px;
+width: 39px;
+margin-left: -3px;
+border-radius: nullpx;
+opacity: 0.5;
+}
+.new-div{
+position:absolute;
+height: 942px;
+width: 1151px;
+left: 191px;
+top: 200px;
+/* background-color: black; */
+}
+.upcoming{
+    height: 40px;
+    width: 287px;
+    margin-left: 0px;  
+}
+.view{
+    position: absolute;
+    width: 78px;
+    height: 40px;
+    left: 1024px;
+    top: 10px;
+    cursor: pointer;
+    opacity: 0.98;
+    border-radius: 8px;
+}
+.element{
+top: 40px;
+height: 3px;
+width: 48px;
+border-radius: 16px;
+background: #0259EB;
 }
