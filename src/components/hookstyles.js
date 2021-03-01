@@ -23,7 +23,6 @@ export default makeStyles(() => ({
       flexDirection: 'column',
       justifyContent: 'space-between',
       background: '#111229',
-    //   boxShadow: '3px 3px 5px 6px #301A68',
       borderRadius: '8px',
       height: '100%',
       position: 'relative',
@@ -68,6 +67,52 @@ export default makeStyles(() => ({
       letterSpacing:"0em",textAlign:"left" ,
       color: '#0259EB' ,
       paddingLeft: '4px',
+      cursor: 'pointer'
+    },
+    user:{
+      background: '#0A0B1A',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      borderRadius: '16px',
+      height: '300px',
+      position: 'relative',
+      border: '2px solid #E5AF56',
+      boxSizing: 'border-box',
+      zIndex: 1,
+    },
+    newUser : {
+      fontFamily:"Quattrocento",
+      fontSize:"16px",
+      fontStyle:"normal",
+      fontWeight:700,lineHeight:"32px",
+      letterSpacing:"0em",
+      textAlign:"left",
+      color: "#FFFFFF",
+    },
+    location :{
+      fontFamily:"Nunito",
+      fontSize:"15px",fontStyle:"normal",
+      fontWeight:"600",
+      lineHeight:"16px",
+      letterSpacing:"0em",
+      textAlign:"left",
+      color: "#E5C558",
+      paddingLeft: '10px',
+      paddingTop: '4px'
+    },
+    cardContent: {
+      position: "absolute",
+      top: "110px",
+      left: "25px",
+    },
+    typoReview:{
+      fontFamily:"Nunito",
+      fontSize:"17px",fontStyle:"normal",
+      fontWeight:"400",
+      lineHeight:"24px",
+      letterSpacing:"0em",
+      textAlign:"left",
+      color: "#FFFFFF",
     }
-  
   }))

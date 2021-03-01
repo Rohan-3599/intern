@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Button, Card, Grid, Typography, CardMedia, CardActions, CardContent } from '@material-ui/core'
+import { Container, Paper, Card, Grid, Typography, CardMedia, CardActions, CardContent } from '@material-ui/core'
 import Navbar from './Navbar'
 import './styles.css'
 import userInfo from './userInfo'
@@ -8,6 +8,9 @@ import Circle from './circle'
 import useStyles from './hookstyles'
 import Vector1 from '../images/Vector1.png'
 import ticket from '../images/Ticket.png'
+import userReview from './userReview';
+import vector2 from '../images/Vector2.png'
+import vector3 from '../images/Vector3.png'
 const Divcontainer = () => {
   const classes = useStyles();
   return (
@@ -67,7 +70,7 @@ const Divcontainer = () => {
                     <Typography variant="body2" className={classes.content} component="h2">{detail.category}</Typography>
                   </div>
                   <Typography className={classes.title} gutterBottom variant="h5" component="h2">{detail.name}</Typography>
-                  <CardContent style={{display:'flex' , cursor: 'pointer'}}>
+                  <CardContent style={{display:'flex' }}>
                     <Typography variant="body2" className={classes.info}  component="p">{detail.extra}</Typography>
                     <img src={Vector1} className="arrow"/>
                   </CardContent>
@@ -78,15 +81,20 @@ const Divcontainer = () => {
               </Grid>
             ))}
           </Grid>
-          <Grid container style={{ marginTop: '114px' }} >
+          <Grid container style={{ marginTop: '114px', position:'relative' }} >
             <div className="upcoming">
               <Typography style={{
                 fontFamily: 'Libre Baskerville', fontSize: '32px', fontStyle: 'normal', fontWeight: 400, lineHeight: '40px', letterSpacing: '0em', textAlign: 'left', color: '#FFFFFF',
               }}>Reviews</Typography>
-              <div className="view">
+              <div className="review">
+              <Typography style={{
+                  fontFamily: 'Nunito', fontSize: '16px', fontStyle: 'normal', fontWeight: 600, lineHeight: '24px', letterSpacing: '0em', textAlign: 'right', color: '#FFFFFF', marginTop: '4px'
+                }}>1</Typography>
                 <Typography style={{
-                  fontFamily: 'Nunito', fontSize: '16px', fontStyle: 'normal', fontWeight: 700, lineHeight: '24px', letterSpacing: '0em', textAlign: 'right', color: '#E5C558',
-                }}>View All</Typography>
+                  fontFamily: 'Nunito', fontSize: '16px', fontStyle: 'normal', fontWeight: 600, lineHeight: '24px', letterSpacing: '0em', textAlign: 'right', color: '#FFFFFF', opacity: 0.6, marginTop: '4px'
+                }}>/12</Typography>
+                <img src={vector2} className="vector2" alt="/" />
+                <img src={vector3} className="vector3" alt="/" />
               </div>
             </div>
 
@@ -94,58 +102,36 @@ const Divcontainer = () => {
           <div className="element">
 
           </div>
-          <Grid container justify="center" spacing={4} >
-            <Grid item lg={3} xs={6}>
-              <Card className={classes.card}>
-                <CardMedia className={classes.media} image={'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title="roh" />
-
-                <div className={classes.details}>
-                  <Typography variant="body2" color="textSecondary" component="h2">abc</Typography>
-                </div>
-                <Typography className={classes.title} gutterBottom variant="h5" component="h2">raju</Typography>
-                <CardContent>
-                  <Typography variant="body2" color="textSecondary" component="p">=Im great</Typography>
-                </CardContent>
-                <CardActions className={classes.cardActions}>
-                  <Button size="small" color="primary"  >
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item lg={3} xs={6}>
-              <Card className={classes.card}>
-                <CardMedia className={classes.media} image={'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title="roh" />
-
-                <div className={classes.details}>
-                  <Typography variant="body2" color="textSecondary" component="h2">abc</Typography>
-                </div>
-                <Typography className={classes.title} gutterBottom variant="h5" component="h2">raju</Typography>
-                <CardContent>
-                  <Typography variant="body2" color="textSecondary" component="p">=Im great</Typography>
-                </CardContent>
-                <CardActions className={classes.cardActions}>
-                  <Button size="small" color="primary"  >
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item lg={3} xs={6}>
-              <Card className={classes.card}>
-                <CardMedia className={classes.media} image={'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title="roh" />
-
-                <div className={classes.details}>
-                  <Typography variant="body2" color="textSecondary" component="h2">abc</Typography>
-                </div>
-                <Typography className={classes.title} gutterBottom variant="h5" component="h2">raju</Typography>
-                <CardContent>
-                  <Typography style={{}}>=Im great</Typography>
-                </CardContent>
-                <CardActions className={classes.cardActions}>
-                  <Button size="small" color="primary"  >
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
+          <Grid container justify="center" alignItems="stretch" spacing={3} direction="row" style={{ marginTop: '20px' }}>
+            {userReview.map((review) => (
+              <Grid item lg={4} xs={6} spacing={16} style={{position: 'relative'}} >
+                <Card className={classes.user} key={review.id} >
+                   
+                   
+                   <div className="header">
+                   <img src={review.url} className="review-image" alt="/" />
+                   <div className="name-info">
+                   <Typography className={classes.newUser}>
+                           {review.fullname}
+                   </Typography>
+                   <div className="small-box">
+                   <img src={review.flag} className="flag" alt="/" />
+                   <Typography className={classes.location}>
+                     {review.location}
+                   </Typography>
+                   </div>
+                   </div>
+                   
+                   </div>
+                  <CardContent className={classes.cardContent} style={{display:'flex' }}>
+                    <Typography variant="body2" className={classes.typoReview}  component="p">{review.text}</Typography>
+                  </CardContent>
+                  
+                </Card>
+               
+                <div className="background2"></div>
+              </Grid>
+            ))}
           </Grid>
         </div>
       </Grid>
