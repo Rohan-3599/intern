@@ -27,7 +27,7 @@ const Navbar = () => {
             <AppBar position="static" className={classes.appBar}>
              <Toolbar>
                  <img src={logo} className="img-header"/>
-                <Grid container direction="row" className={classes.typoGraphy}>
+                <Grid container direction="row" className={classes.typoGraphy} >
                 
                  <ul id="navbar">
                  <IconButton  size="small" >
