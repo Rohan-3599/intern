@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme) => ({
        background: "none" ,
        boxShadow : "none" ,
        display: "flex" ,
+       [theme.breakpoints.down('md')]: {
+        width: 930,
+      },
     },
     typoGraphy : {
         display: 'inline' ,
