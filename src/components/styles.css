@@ -1,28 +1,17 @@
- .grid1 {
-    position : relative;
-    height: 862px ; 
-    background-image: url("../images/Img.png");
-    /* background-image: url("../images/Img.png"); */
-    background-size: cover;
-    background-repeat: no-repeat;
-}  
+ 
 .grid2{
     position:absolute;
     top : 862px;
-    /* background-color: #FFFFFF ; */
     height: 1219px;
 }
 
 .img-header{
     margin-left: 143px;
     margin-top : 0;
+    flex-grow: 1;
 }
-#navbar {
-    position: absolute;
+.navbar {
     list-style-type: none;
-    margin-left: 775px;
-    top: 10px;
-    width: auto;
     
 }
 li {
@@ -37,8 +26,6 @@ li {
     width: 383px;
     left: 151px;
     top: 246px;
-    border-radius: nullpx;
-
 }
 .div-text{
     position:absolute;
@@ -49,22 +36,8 @@ top: 366px;
 border-radius: nullpx;
 opacity: 0.6;
 }
-.div-circle{
-position: absolute;
-height: 267px;
-width: 1140px;
-left: 241px;
-top: 621px;
-border-radius: 0px;
-display: flex;
-}
-.div-circle-2{
-    position: relative;
-    height: 267px;
-    width: 267px;
-    border-radius: 0px;
-    
-}
+
+
 .circle{
 position:absolute;
 height: 208px;
@@ -111,25 +84,20 @@ margin-left: -3px;
 border-radius: nullpx;
 opacity: 0.5;
 }
-.new-div{
-position:absolute;
-height: 942px;
-width: 1151px;
-left: 191px;
-top: 200px;
-/* background-color: black; */
-}
+
 .upcoming{
     height: 40px;
-    width: 287px;
+    width: 100%;
     margin-left: 0px;  
+    display : flex;
+    justify-content: space-between;
 }
 .view{
     position: absolute;
     width: 78px;
     height: 40px;
-    left: 1024px;
-    top: 10px;
+    right: 30px;
+    top: 10px; 
     cursor: pointer;
     opacity: 0.98;
     border-radius: 8px;
@@ -238,9 +206,90 @@ margin-top:10px;
 cursor: pointer;
 }
 .vector3{
-    height: 13.500000000000052px;
+height: 13.500000000000052px;
 width: 18.75000000000007px;
 margin-left: 16px;
 margin-top:10px;
 cursor: pointer;
 }
+.new-div{
+    position:absolute;
+    height: 942px;
+    width: 1151px;
+    left: 191px;
+    top: 200px;
+    /* background-color: black; */
+    }
+    .div-circle{
+        position: absolute;
+        height: 267px;
+        width: 1140px;
+        left: 241px;
+        top: 621px;
+        border-radius: 0px;
+        display: flex;
+        }
+    .div-circle-2{
+        position: relative;
+        height: 267px;
+        width: 267px;
+        border-radius: 0px;
+            
+        }
+   .grid1 {
+        position : relative;
+        height: 862px ; 
+        background-image: url("../images/Img.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        } 
+
+/* responsive */
+/* Small (sm) devices (landscape phones, 576px and up) */
+@media (max-width: 768px) { 
+    .new-div{
+        left: 20px;
+        /* background-color: black; */
+        }
+        .div-circle{
+            left: 20px;
+            }
+        .div-circle-2{
+            position: relative;
+            height: 267px;
+            width: 267px;
+            border-radius: 0px;
+                
+            }
+            .div-gradient {
+                left: 20px;    
+            }   
+ }
+/* Medium (md) devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 979px) { 
+    .new-div{
+        left: 100px;
+        /* background-color: black; */
+        }
+        .div-circle{
+            left: 150px;
+            }
+        .div-circle-2{
+            position: relative;
+            height: 267px;
+            width: 267px;
+            border-radius: 0px;
+                
+            }
+            .div-gradient {
+                left: 100px;
+            }
+        }
+/* Large (lg) devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { 
+    
+ } */
+/* Extra (xl) large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) { 
+    
+ } */

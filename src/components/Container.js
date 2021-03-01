@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Paper, Card, Grid, Typography, CardMedia, CardActions, CardContent } from '@material-ui/core'
+import { Container, Card, Grid, Typography , CardContent } from '@material-ui/core'
 import Navbar from './Navbar'
 import userInfo from './userInfo'
 import Vectorcircle from './vectorcircle'
@@ -18,9 +18,7 @@ const Divcontainer = () => {
       <Grid item className="grid1" >
         <Navbar />
         <div className="div-gradient">
-          <Typography style={{
-            fontFamily: 'Libre Baskerville', fontSize: '80px', fontStyle: 'normal', fontWeight: 700, lineHeight: '96px', letterSpacing: '0em', textAlign: 'left', color: '#FFFFFF',
-          }}>
+          <Typography className={classes.cari}>
             Cari Cari
 </Typography>
         </div>
@@ -85,7 +83,7 @@ const Divcontainer = () => {
           </div>
           <Grid container justify="center" alignItems="stretch" spacing={3} direction="row" style={{ marginTop: '20px' }}>
             {userReview.map((review) => (
-              <Grid item lg={4} xs={6} spacing={16} style={{position: 'relative'}} >
+              <Grid item lg={4} xs={4} sm={4} md={4} spacing={16} style={{position: 'relative'}} >
                 <Card className={classes.user} key={review.id} >
                    
                    

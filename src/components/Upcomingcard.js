@@ -9,12 +9,10 @@ const Upcomingcard = ({detail}) => {
     const classes = useStyles();
     const [hover, sethover] = useState(false);
     return (
-        <Grid item lg={3} xs={6} style={{position: 'relative'}} >
+        <Grid item lg={3} xs={3} md={3} sm={3} style={{position: 'relative'}} >
                   <div className="line"></div>
                   {hover ? <img src={show} onMouseLeave={() => sethover(false)}  className="ticket" alt="/" /> :
                   <img src={ticket} onMouseOver={() => sethover(true)} className="ticket" alt="/" /> }
-                  
-                  {/* <img src={ticket} onMouseOver={this.src=require(show)} onMouseLeave={this.src=require(ticket)} className="ticket" alt="/" />  */}
                 <Card className={classes.card} key={detail.id} >
 
                   <CardMedia className={classes.media} image={detail.url} />
