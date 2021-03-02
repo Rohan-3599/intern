@@ -14,12 +14,16 @@
     list-style-type: none;
     
 }
-li {
+li.desktop {
     display: inline-block;
     margin-right: 37px;
     cursor:pointer;
 }
-
+li.mobileicon{
+    display: inline-block;
+    cursor:pointer;
+    margin-left: 25px;
+}
 .div-gradient {
     position:absolute;
     height: 96px;
@@ -87,20 +91,14 @@ opacity: 0.5;
 
 .upcoming{
     height: 40px;
-    width: 100%;
-    margin-left: 0px;  
-    display : flex;
-    justify-content: space-between;
+    margin-left: 0px; 
 }
 .view{
-    position: absolute;
-    width: 78px;
     height: 40px;
-    right: 30px;
-    top: 10px; 
+    margin-left: 800px;
     cursor: pointer;
     opacity: 0.98;
-    border-radius: 8px;
+    border-radius: 8px;  
 }
 .element{
 top: 40px;
@@ -243,7 +241,11 @@ cursor: pointer;
         background-size: cover;
         background-repeat: no-repeat;
         } 
-
+.grid-container{
+    display:flex;
+    width: 100%;
+    /* position: relative; */
+}
 /* responsive */
 /* Small (sm) devices (landscape phones, 576px and up) */
 @media (max-width: 768px) { 
@@ -264,6 +266,15 @@ cursor: pointer;
             .div-gradient {
                 left: 20px;    
             }   
+            .img-header{
+                margin-left: 20px;
+            }
+            .div-text{
+                width: 361px;
+                left: 20px;
+                top: 330px;
+                
+            }
  }
 /* Medium (md) devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 979px) { 
@@ -284,6 +295,23 @@ cursor: pointer;
             .div-gradient {
                 left: 100px;
             }
+            .img-header{
+                margin-left: 83px;
+            }
+            .div-text{
+                width: 411px;
+                left: 100px;
+                top: 340px;
+                
+            }
+        }
+        @media (max-width: 1536px){
+             .view{
+                margin-left: calc(100%-50px);
+             }
+             .grid-container{
+                 width: calc(100%-50px)
+             }
         }
 /* Large (lg) devices (desktops, 992px and up) */
 /* @media (min-width: 992px) { 

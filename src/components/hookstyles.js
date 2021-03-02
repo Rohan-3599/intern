@@ -124,14 +124,30 @@ export default makeStyles((theme) => ({
     letterSpacing: '0em',
     textAlign: 'left',
     color: '#FFFFFF',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.between('xs', 'sm')]: {
       fontSize: '60px',
     },
-    // [theme.breakpoints.up('md')]: {
-    //   backgroundColor: theme.palette.primary.main,
-    // },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '48px',
+    },
     // [theme.breakpoints.up('lg')]: {
     //   backgroundColor: green[500],
     // },
+  },
+  text: {
+    fontFamily: 'Nunito',
+    fontSize: '24px',
+    fontStyle: 'normal',
+    fontWeight: 400,
+    lineHeight: '32px',
+    letterSpacing: '0em',
+    textAlign: 'left',
+    color: '#FFFFFF',
+    [theme.breakpoints.between('xs', 'sm')]: {
+      fontSize: '20px',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '16px',
+    },
   }
 }))
