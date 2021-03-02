@@ -92,10 +92,12 @@ opacity: 0.5;
 .upcoming{
     height: 40px;
     margin-left: 0px; 
+    flex-grow: 1;
 }
 .view{
+    position: absolute;
     height: 40px;
-    margin-left: 800px;
+    right:30px;
     cursor: pointer;
     opacity: 0.98;
     border-radius: 8px;  
@@ -243,15 +245,15 @@ cursor: pointer;
         } 
 .grid-container{
     display:flex;
-    width: 100%;
-    /* position: relative; */
+    max-width: 100%;
+    flex-grow: 1;
+    position: relative;
 }
 /* responsive */
 /* Small (sm) devices (landscape phones, 576px and up) */
 @media (max-width: 768px) { 
     .new-div{
         left: 20px;
-        /* background-color: black; */
         }
         .div-circle{
             left: 20px;
@@ -278,9 +280,9 @@ cursor: pointer;
  }
 /* Medium (md) devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 979px) { 
+   
     .new-div{
         left: 100px;
-        /* background-color: black; */
         }
         .div-circle{
             left: 150px;
@@ -305,19 +307,11 @@ cursor: pointer;
                 
             }
         }
-        @media (max-width: 1536px){
-             .view{
-                margin-left: calc(100%-50px);
-             }
-             .grid-container{
-                 width: calc(100%-50px)
-             }
+        @media (min-width: 979px) and (max-width: 1200px){
+            
         }
-/* Large (lg) devices (desktops, 992px and up) */
-/* @media (min-width: 992px) { 
-    
- } */
-/* Extra (xl) large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1200px) { 
-    
- } */
+        /* @media (max-width: 1536px){
+             .grid-container{
+                 width: 100%
+             }
+        } */

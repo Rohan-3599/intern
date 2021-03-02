@@ -7,6 +7,10 @@ export default makeStyles((theme) => ({
     maxWidth: '100%',
     paddingLeft: 0,
     paddingRight: 0,
+    [theme.breakpoints.down('sm')]: {
+      width:'100%',
+    },
+
   },
   media: {
     height: 0,
